@@ -1,0 +1,9 @@
+.headerPrincipal .container {
+    display: flex; /*flex me permite colocar los elementos uno al lado del otro siempre que se utilice una etiqueta padre con dichos elementos en su interior*/
+    align-items: center; /*hace que los elementos dentro del elemento padre que está con flex se alineen verticalmente, por lo tanto, para que ellos se alineen en el centro podemos utilizar 'align-items: center;' */
+    justify-content: space-between; /*me permite generar un espacio entre los elementos, con esta clase los elementos se situan a los laterales generando un espacio en medio, caso contrario tendriamos todo ese espacio del lado derecho*/
+}
+
+.headerPrincipal-nav {
+    display: flex;
+}
