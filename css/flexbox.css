@@ -7,3 +7,27 @@
 .headerPrincipal-nav {
     display: flex;
 }
+
+.rodapePrincipal-patrocinadores .container { /*En esta parte vamos a organizar nuestro footer, más precisamente seccion patrocinadores y formulario. En mi clase padre aplico el 'display: flex;' para ubicar mis elementos uno al lado del otro, con 'justify-content: space-between;' genero un espacio entre los elementos, siempre y cuando la caja que los contenga me lo permita*/
+    display: flex;
+    justify-content: space-between;
+}
+
+.rodapePrincipal-patrocinadores-list { /*Se utilizo una 'ul' para listar los patrocinadores, por tal motivo, cada item aparecera uno debajo del otro, para cambiar esta situacion podemos aplicar al contedor padre la propiedad 'display: flex;' para que ubique un 'item' al lado del otro, luego para que estos queden alineados al centro puedo utilizar la propiedad 'align-items: center;', ahora bien, por defecto los items quedaran muy juntos unos a otros, si utilizamos la propiedad 'justify-content: space-between;' observaremos en un principio que no mejoro nuestra situacion como en el caso del header, es más sigue todo igual, esto se debe a que el navegador a traves de dicha propiedad distrubuye el espacio sobrante entre los distintos elementos y en el caso de las 'ul', no hay que distribuir, a no ser que le indiquemos al contenedor padre (al flex) que este ocupa cierto porcentaje de la pantalla (su capacidad), esto lo conseguiremos gracias a la propiedad 'width', si observamos como va quedando nuestra pagina, vamos a notar que nuestra lista de patrocinadores representa aproximadamente un 75% del ancho del contenedor en el que se encuentra, valiendonos de esa apreciacion podemos aplicar ese valor a nuesto 'width'. Ahora bien, al aplicar estos cambios vamos a notar que nuestra 'ul' ahora quedo encimada a nuestro 'form', una posible solucion es darle un menor porcentaje al ancho de dicho (70%) contenedor y agregarle un margin-right de 5%*/
+    display: flex;
+    align-items: center;
+    /*justify-content: space-between;*/
+    /*si comparamos el resultado obtenido hasta ahora con nuestra imagen guia, los item de nuestra 'ul' tienen un espacio mayor en los laterales con respecto a sus respectivos margenes, para conseguir esto, solo tenemos que cambiar la propiedad 'espacio-entre' por la propiedad 'espacio-alrededor'*/
+    justify-content: space-around;
+    width: 70%;
+    margin-right: 5%;
+}
+
+.rodapePrincipal-contatoForm { /*para que nuestros elementos queden distribuidos de una mejor manera es necesario darle el 25% restante de la pantalla a nuestro 'form'*/
+    width: 25%;
+}
+
+.rodapePrincipal-contatoForm-fieldset {
+    /*Para terminar con nuestro footer solo nos resta reacomodar los elementos de nuestro 'form', si comparamos nuestros resultados con la imagen guia vamos a notar que nuestra caja de texto se escuentra separada del boton enviar, para corregir esto y que quede uno al lado del otro simplemente basta con aplicar la propiedad 'display: flex;' al contenedor del 'form'.*/
+    display: flex;
+}
