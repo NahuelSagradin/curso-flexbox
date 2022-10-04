@@ -80,3 +80,9 @@ Para poder ponernos a trabajar sobre dicha solicitud es necesario identificar nu
     width: 50px;
     background-color: green;
   }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
