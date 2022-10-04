@@ -75,18 +75,38 @@ Para poder ponernos a trabajar sobre dicha solicitud es necesario identificar nu
     Para dejar solo cuatro items por linea es necesario aplicar en la etiqueta padre la propiedad que aprendimos en el pasado que me le indica al navegador que una vez que llegue al tamaño definido en cada item quiebre y pase a la siguiente columna.*/
 }
 
+/* EMPEZANDO CON GRID*/
+
+/* Cuando ejecutemos la prueba del codigo correspondiente a la clase grid, recordar poner la altura, el acho y algún color para las divs.*/
+
 .box {
     height: 50px;
     width: 50px;
     background-color: green;
   }
+
+/*Para organizar este código HTML y hacer un grid (pensando sólo en el posicionamiento) podemos escribir el siguiente código CSS:*/
+
 /*
   .grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
   }
 */
+
+/*De esta manera, todos los elementos hijos se mantendrían uno al lado del otro y cuando lleguen al límite de la página se romperían hacia la línea inferior, formando el grid.
+
+Fíjate que aún no hemos fijado los márgenes, los elementos probablemente se quedarán pegados.*/
+
+/* A tener en cuenta: 
+
+Es complicado usarlas porque ponen comportamientos que no son adecuados para grids. Tanto space-between cuanto space-around harían que la última línea quedara muy fuera del patrón, en caso de que esa tuviera menos elementos que el resto de las líneas.
+
+Es complicado usarlas porque ponen comportamientos que no son adecuados para grids. Tanto space-between cuanto space-around harían que la última línea quedara súper rara, en caso de que esa tuviera menos elementos de que el total de elementos por línea.*/
+
+/* Para espaciar correctamente los elementos de un grid tenemos que hacer algunos cálculos con el viejo y buen margin y width.
+
+Si tenemos 3 elementos por línea podemos hacer algo así: */
 
 .grid {
     display: flex;
@@ -96,3 +116,11 @@ Para poder ponernos a trabajar sobre dicha solicitud es necesario identificar nu
     width: 31.3%;
     margin: 1%;
   }
+
+  /*En este caso tendríamos 3 .course por línea, cada uno con width: 31.3% y margin: 1%.
+  
+  De width eso totaliza: 31.3 * 3 = 93.9%.
+  
+  De margin eso totaliza: 6% (1% a la izquierda y 1% a la derecha de cada elemento).
+  
+  En el total tenemos: 93.9% + 6% = 99.9% que se puede redondear al 100% */
