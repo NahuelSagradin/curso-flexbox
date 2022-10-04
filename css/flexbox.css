@@ -142,6 +142,18 @@ Si tenemos 3 elementos por línea podemos hacer algo así: */
   .headerPrincipal-nav {
     /*para conseguir que nuestro menu responde de la misma manera (en forma de columna) aplicamos al elemento padre de los items, es decir, al 'ul' la misma propiedad; */
     flex-direction: column;
-    /*ahora solo nos queda acomodar los items de nuestro menu, en nuestra version desktop los alineamos al centro, es decir, los alineamos con respecto al eje de coordenadas 'x' con la propiedad 'align-items: center;', dicha propiedad alinea al centro distribuyendo el mismo espacio arriba y abajo. Cuando cambiamos la propiedad flex a colum, este los alinea con respecto al eje 'y', por lo cual, en lugar de distribuir el mismo espacio arriba y abajo, lo hara a los costados, lo cual no esta mal, solo que para aprovechar el ancho de la pantalla mobile, vamos a dejar que los item vayan de lado a lado, por lo que vamos a volver los elementos a su estado padron, recordar que esto se debe hacer en el elemento padre.*/
-    
+    /*ahora solo nos queda acomodar los items de nuestro menu, en nuestra version desktop los alineamos al centro, es decir, los alineamos con respecto al eje de coordenadas 'x' con la propiedad 'align-items: center;', dicha propiedad alinea al centro distribuyendo el mismo espacio arriba y abajo. Cuando cambiamos la propiedad flex a colum, este los alinea con respecto al eje 'y', por lo cual, en lugar de distribuir el mismo espacio arriba y abajo, lo hara a los costados, lo cual no esta mal, solo que para aprovechar el ancho de la pantalla mobile, vamos a dejar que los item tengan el tamaño completo de la pantalla, por lo que vamos a volver los elementos a su estado padron, recordar que esto se debe hacer en el elemento padre.*/
   }
+
+  /*Teniendo en cuenta que el formato de pantalla va ser mas pequeño, si dejamos nuestro listado de cursos con el mismo formato que en desktop estos podrian no apreciarse del todo bien, por lo que vamos a cambiarlos para cada item ocupe el 100% de la pantalla, esto lo conseguimos aplicando el padron linea sobre el elemento padre a traves de la propiedad; */
+
+  .contenidoPrincipal-cursos {
+    flex-direction: column; /*con esto conseguimos que ahora nuestros items se acomoden uno debajo del otro, en columnas.*/
+  }
+
+  /*para que cada uno de nuestros items ocupe el total de la pantalla, tenemos que cambiar su 'width' a 100% en lugar de como lo habiamos iniciado en un principio. */
+  .contenidoPrincipal-cursos-link {
+    width: 100%;
+  }
+
+  
