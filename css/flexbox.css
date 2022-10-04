@@ -124,3 +124,24 @@ Si tenemos 3 elementos por línea podemos hacer algo así: */
   De margin eso totaliza: 6% (1% a la izquierda y 1% a la derecha de cada elemento).
   
   En el total tenemos: 93.9% + 6% = 99.9% que se puede redondear al 100% */
+
+  /* RESPONSIVE */
+
+  /*Para trabajar la parte mobile es necesario recurrir a la herramienta de desarrollador (haciendo click derecho-inspeccionar) y adaptando la pantalla a un tamaño de smartphone o tablet segun corresponda, es decir, a un modo responsivo. Al hacer esto vamos a notar que varios elementos que sobresalen de la pantalla y hacen que todo se distorsione. */
+
+  /*Vamos a comenzar por adaptar el header de nuestro sitio, vamos a dejar el logo de nuestra pagina y despues queremos que el menu se organice en forma de columnas, esto ya lo hicimos antes, asi que vamos aplicar la misma propiedad; */
+
+  .headerPrincipal .container {
+    flex-direction: column; /*recordar que flex coloca los elementos uno al lado del otro por padron, nosotros necesitamos cambiar esa opcion a columnas. Como lo aplicamos en principio sobre el elemento padre, en principio tendriamos una columna con dos filas.*/
+    align-items: initial; /*quito la alineacion vertical y lo dejo de lado a lado.*/
+
+    /*ahora solo nos falta alinear los textos al centro, esto lo conseguimos utilizando la propiedad; */
+    text-align: center; 
+  }
+
+  .headerPrincipal-nav {
+    /*para conseguir que nuestro menu responde de la misma manera (en forma de columna) aplicamos al elemento padre de los items, es decir, al 'ul' la misma propiedad; */
+    flex-direction: column;
+    /*ahora solo nos queda acomodar los items de nuestro menu, en nuestra version desktop los alineamos al centro, es decir, los alineamos con respecto al eje de coordenadas 'x' con la propiedad 'align-items: center;', dicha propiedad alinea al centro distribuyendo el mismo espacio arriba y abajo. Cuando cambiamos la propiedad flex a colum, este los alinea con respecto al eje 'y', por lo cual, en lugar de distribuir el mismo espacio arriba y abajo, lo hara a los costados, lo cual no esta mal, solo que para aprovechar el ancho de la pantalla mobile, vamos a dejar que los item vayan de lado a lado, por lo que vamos a volver los elementos a su estado padron, recordar que esto se debe hacer en el elemento padre.*/
+    
+  }
