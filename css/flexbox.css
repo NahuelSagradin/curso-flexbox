@@ -54,3 +54,29 @@
     flex-wrap: wrap;
 
 }
+
+/* SECCION DE CURSOS */
+
+/*Nos solicitan que modifiquemos nuestra seccion de cursos, quieren que los mismos queden uno al lado del otro de forma que entren solo 4 cursos por fila. 
+Para poder ponernos a trabajar sobre dicha solicitud es necesario identificar nuestra etiqueta principal (padre) a la cual aplicarle las propiedades necesarias para que sus componentes asuman esta caracteristica.*/
+
+.contenidoPrincipal-cursos {
+    /*ya identificamos nuestra clase principal, es una 'ul' que contine una lista de cursos:*/
+    /*para conseguir los items de nuestra 'ul' queden uno al lado del otro aplicamos la propiedad;*/
+    display: flex; /*dichos elementos al no tener un tamaño definido van a quedar superpuestos unos con otros.*/
+    flex-wrap: wrap;
+
+}
+
+.contenidoPrincipal-cursos-link {
+    /*para evitar que nuestros items se superpongan es necesario hacer lo mismo que con el contenedor principal, es decir, aplicar la propiedad; */
+    display: flex; /*en un principio no vamos a obtener cambio alguno, esto se debe a que todavia siguen sin tener un tamaño definido, para ello necesitamos además aplicar la propiedad; */
+    width: 23%; /*ahora conseguimos darle a cada item un tamaño definido, solo que como los mismos se encuentran en una misma linea, estos van a definir su tamaño con respecto al 100% de la pantalla para que entren todos!
+    Para dejar solo cuatro items por linea es necesario aplicar en la etiqueta padre la propiedad que aprendimos en el pasado que me le indica al navegador que una vez que llegue al tamaño definido en cada item quiebre y pase a la siguiente columna.*/
+}
+
+.box {
+    height: 50px;
+    width: 50px;
+    background-color: green;
+  }
