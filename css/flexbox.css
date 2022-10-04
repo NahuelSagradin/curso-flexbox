@@ -125,6 +125,12 @@ Si tenemos 3 elementos por línea podemos hacer algo así: */
   
   En el total tenemos: 93.9% + 6% = 99.9% que se puede redondear al 100% */
 
+
+  /*Para que nuestro sitio sea responsive es necesario indicarle a nuestro navegador a partir de que tamaño de pantalla queremos que aplique los cambios que vamos a realizar a continuacion;*/
+
+@media (max-width: 768px) {
+    /*Colocamos aquí @media (max-width), es decir, este código que está aquí a partir de este media query solo va a ser aplicado hasta un máximo de 768 pixeles.  */
+
   /* RESPONSIVE */
 
   /*Para trabajar la parte mobile es necesario recurrir a la herramienta de desarrollador (haciendo click derecho-inspeccionar) y adaptando la pantalla a un tamaño de smartphone o tablet segun corresponda, es decir, a un modo responsivo. Al hacer esto vamos a notar que varios elementos que sobresalen de la pantalla y hacen que todo se distorsione. */
@@ -156,4 +162,36 @@ Si tenemos 3 elementos por línea podemos hacer algo así: */
     width: 100%;
   }
 
-  
+  /*ahora solo nos queda adaptar nuestro mapa de cursos, en el cual tenemos un 'nav' con los accesos a cada uno de ellos, en un principio a estos los acomodamos en forma de columnas, generando un quiebre a una altura determinada. Para poder adaptarlo es necesario volver a modificar dicha propiedad a una altura automatica.*/
+
+  .rodapePrincipal-navMap-list {
+    height: auto;
+    /*como le asignamo una altura automatica ya no necesitamos que se aplique la propiedad de quiebre para que al llegar a la altura idicada pase a la siguiente columna.*/
+    flex-wrap: nowrap;
+  }
+
+  /*Para ajustar nuestro footer, hacemos exactamente lo mismo, */
+
+  .rodapePrincipal-patrocinadores .container {
+    flex-direction: column;
+  }
+
+  .rodapePrincipal-contatoForm {
+    width: 100%;
+  }
+
+  .rodapePrincipal-patrocinadores-list {
+    align-items: center;
+    width: 100%;
+    margin: 0;
+  }
+
+  .rodapePrincipal-contatoForm-legend {
+    margin-left: auto;
+  }
+
+  .rodapePrincipal-contatoForm-fieldset{
+    justify-content: center;
+  }
+
+}
