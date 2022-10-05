@@ -191,4 +191,13 @@ Si tenemos 3 elementos por línea podemos hacer algo así: */
     width: 100%;
   }
 
+  /*Cuando estamos en la versión mobile, normalmente los aplicativos son de más importancia y es la forma de resaltar un poco más esta función.
+  Supongamos que nos solicitan que el último ítem que habla de nuestra aplicación, nuestra app, vaya al primer item, una forma rapida de resorlver esto seria intercambiar de lugar el ultimo item, ahora bien flexbox tiene una herramienta que nos ayuda a poder hacer eso sin tener que modificar toda la estructura de nuestro index, si aplicamos la propiedad; */
+
+  .headerPrincipal-nav-link-app {
+    order: -1; /*esta propiedad me ayuda a ordenar los flex item a otra posición*/
+    /*Por padrón, todos los elementos (flex items) que están dentro de un container flex, ellos van a estar ordenados por cero, es decir, todos tienen un 0 como indice padrón, esto me permite ordenar cada item que está dentro de ese container de la forma que yo quisiera.
+    Para colocar un item primero de todo, entonces lo colocó con indice -1, porque ahí sería la parte quedaría de primero antes que el 0, obviamente y quedarían todos los items ordenados después de ese, en la posición en que se encuentren, del mismo modo que si quisiera colocar un flex item al ultimo lugar tendria que ponerle un indice superior a 0. Ya de esta forma con -1 tenemos entonces aquí nuestra app como la primera opción de esa de ese menú y en la versión desktop estaría con la versión que ya tenían. */
+  }
+
 }
