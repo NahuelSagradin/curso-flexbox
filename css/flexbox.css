@@ -129,6 +129,35 @@ Si tenemos 3 elementos por línea podemos hacer algo así: */
 
   /*Para que nuestro sitio sea responsive es necesario indicarle a nuestro navegador a partir de que tamaño de pantalla queremos que aplique los cambios que vamos a realizar a continuacion;*/
 
+  /*SECCION VIDEO*/
+
+  /*Nos solicitan que el video quede a un lado de la descripcion y la opcion de inscribirse, lo cual podemos resolver de forma rapida aplicando sobre el elemento padre la propiedad; */
+
+  .videoSobre .container {
+    display: flex;
+  }
+
+  /*ahora nos solicitan que la descripcion del video quede centrada, esto lo resolvemos rapidamente aplicando sobre la correspondiente clase la propiedad; */
+
+  .videoSobre-sobre {
+    text-align: center;
+    /*ahora nos solicitan que la opcion de inscribirse ocupe el mismo espacio que la descripcion, esto lo conseguimos aplicando las propiedades; */
+    display: flex;
+    flex-direction: column;
+  }
+
+  /*a continuacion nos solicitan que el video quede un poco mas grande que la descripcion y la opcion de inscribirse, esto lo podemos conseguir aplicando sobre la clase correspondiente al video la propiedad; */
+
+  .videoSobre-video {
+    flex-grow: 2; /*Flex-grow va a tomar todo el espacio que está sobrando de lado a lado y lo va a dividir en la cantidad de secciones que yo le indique. Por ejemplo, en este caso va a tomar dos espacios y los va a dividir entre el espacio que está el video. */
+  }
+
+  /*ahora para terminar de estilizar la parte del video, tenemos que rellenar el espacio que se encuentra entre la descripcion y el botón, para que este ultimo quede en la parte inferior, esto lo conseguimos aplicando sobre la clase correspondiente la propiedad;  */
+
+  .videoSobre-sobre-list {
+    flex-grow: 1; /*con colocarle esta propiedad generamos el espacio que estamos necesitando*/
+  }
+
 @media (max-width: 768px) {
     /*Colocamos aquí @media (max-width), es decir, este código que está aquí a partir de este media query solo va a ser aplicado hasta un máximo de 768 pixeles.  */
 
