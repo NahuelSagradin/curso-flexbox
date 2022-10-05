@@ -160,6 +160,23 @@ Si tenemos 3 elementos por línea podemos hacer algo así: */
 
   .videoSobre-sobre-list {
     flex-grow: 2; /*con colocarle esta propiedad generamos el espacio que estamos necesitando*/
+    
+    /*La propiedad flex-grow vista en el ejercicio anterior ayuda mucho si queremos que un elemento ocupe todo el ancho restante del flex container. 
+    Por ejemplo, si tenemos:
+
+    Elemento 1: 200 px.
+    
+    Elemento 2: 200 px.
+
+    Espacio vacío que restó del flex container: 600 px.
+
+    Total: 1000 px.
+
+    Se ponemos flex-grow: 1 en el primer elemento, este pasa a tener 800 px de ancho, es decir:
+
+    Espacio vacío + Elemento 1: 800 px.
+
+    Y el segundo elemento sigue teniendo 200 px de ancho.*/
   }
 
 @media (max-width: 768px) {
