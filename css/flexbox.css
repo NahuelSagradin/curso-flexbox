@@ -150,12 +150,16 @@ Si tenemos 3 elementos por línea podemos hacer algo así: */
 
   .videoSobre-video {
     flex-grow: 2; /*Flex-grow va a tomar todo el espacio que está sobrando de lado a lado y lo va a dividir en la cantidad de secciones que yo le indique. Por ejemplo, en este caso va a tomar dos espacios y los va a dividir entre el espacio que está el video. */
+
+    /*pensando en la versión mobile de esta sección, vamos a notar lo siguiente: si yo voy disminuyendo la pantalla, se está colocando más grande que nuestra sección de ventajas. 
+    Asi como tenemos una propiedad que hace aumentar el tamaño, tenemos otra que hace reducirlo, si aplicamos la propiedad; */
+    flex-shrink: 2;
   }
 
   /*ahora para terminar de estilizar la parte del video, tenemos que rellenar el espacio que se encuentra entre la descripcion y el botón, para que este ultimo quede en la parte inferior, esto lo conseguimos aplicando sobre la clase correspondiente la propiedad;  */
 
   .videoSobre-sobre-list {
-    flex-grow: 1; /*con colocarle esta propiedad generamos el espacio que estamos necesitando*/
+    flex-grow: 2; /*con colocarle esta propiedad generamos el espacio que estamos necesitando*/
   }
 
 @media (max-width: 768px) {
@@ -227,6 +231,11 @@ Si tenemos 3 elementos por línea podemos hacer algo así: */
     order: -1; /*esta propiedad me ayuda a ordenar los flex item a otra posición*/
     /*Por padrón, todos los elementos (flex items) que están dentro de un container flex, ellos van a estar ordenados por cero, es decir, todos tienen un 0 como indice padrón, esto me permite ordenar cada item que está dentro de ese container de la forma que yo quisiera.
     Para colocar un item primero de todo, entonces lo colocó con indice -1, porque ahí sería la parte quedaría de primero antes que el 0, obviamente y quedarían todos los items ordenados después de ese, en la posición en que se encuentren, del mismo modo que si quisiera colocar un flex item al ultimo lugar tendria que ponerle un indice superior a 0. Ya de esta forma con -1 tenemos entonces aquí nuestra app como la primera opción de esa de ese menú y en la versión desktop estaría con la versión que ya tenían. */
+  }
+
+  /*para el caso de nuestra versión mobile necesitamos de una corrección adicional, cuando cambie el tamaño de la pantalla de desktop a una mas pequeña la seccion de video debe cambiar sus elementos de fila a columanas, esto lo conseguimos aplicando la propiedad;  */
+  .videoSobre .container {
+    flex-direction: column; /*con esto conseguimos que nuestro video quede en la parte superior y nuestras ventajas en la parte inferior.*/
   }
 
 }
