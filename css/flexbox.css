@@ -37,6 +37,7 @@
 .rodapePrincipal-contatoForm-fieldset {
     /*Para terminar con nuestro footer solo nos resta reacomodar los elementos de nuestro 'form', si comparamos nuestros resultados con la imagen guia vamos a notar que nuestra caja de texto se escuentra separada del boton enviar, para corregir esto y que quede uno al lado del otro simplemente basta con aplicar la propiedad 'display: flex;' al contenedor del 'form'.*/
     display: flex;
+    justify-content: center;
 }
 
 /* MAPA DE CURSOS */
@@ -187,11 +188,7 @@ Si tenemos 3 elementos por línea podemos hacer algo así: */
   }
 
   .rodapePrincipal-contatoForm-legend {
-    margin-left: auto;
-  }
-
-  .rodapePrincipal-contatoForm-fieldset{
-    justify-content: center;
+    width: 100%;
   }
 
 }
